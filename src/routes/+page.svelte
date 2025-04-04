@@ -1,2 +1,22 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+    import TitleSection from "./TitleSection.svelte";
+    import LanguagesSection from "./LanguagesSection.svelte";
+    import NavBar from "./NavBar.svelte";
+    import Background from "./Background.svelte";
+</script>
+
+<div class="mainpage">
+    <TitleSection/>
+    <Background/>
+    <LanguagesSection/>
+    <NavBar/>
+</div>
+
+<style>
+    .mainpage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+</style>
