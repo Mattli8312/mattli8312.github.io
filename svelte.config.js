@@ -14,7 +14,7 @@ const config = {
 		adapter: adapter()
 	},
 	path:{
-		base: process.env.NODE_ENV === 'production' ? '/mattli8312.github.io' : ''
+		base: '/mattli8312.github.io'
 	}
 };
 
