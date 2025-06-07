@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    --main-bg-color: #ffffff;
+    --primary-text: rgb(10, 184, 228);
+    --secondary-color: rgba(11, 128, 236, 0.87);
+    --tertiary-color: rgb(49, 165, 231);
+    --alternate-color: #000;
+
+    --primary-size: 50px;
+    --secondary-size: 40px;
+    --tertiary-size: 25px;
+
+    overflow-x: hidden;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.titlebar{
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titleName{
+    font-size: var(--primary-size);
+    color: var(--primary-text);
+}
+
+.profile_pic img{
+    width: 100px;
+    padding: 20px;
+    border-radius: 100%;
+}
+
+.navigator{
+    padding: 1vw;
+    margin-right: 5vw;
+}
+
+.navigator .icon{
+    font-size: 25px;
+    float: right;
+    margin-left: 20px;
+}
+
+.workspace_toolbar{
+    display: flex; 
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+}
+
+.pagebutton{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--tertiary-color);
+}
+
+.pagebutton:hover{
+    background: silver;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out
+}
+
+.page{
+    display: flex;
+    margin-left: 25vw;
+    flex-direction: column;
+}
+
+.pageheader{
+    color: var(--secondary-color);
+    font-size: var(--secondary-size);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contentheader{
+    font-size: var(--tertiary-size);
+    font-weight: bold;
+    display: flex;
+    margin-top: 40px;
+}
+
+.contentheader div{
+    margin-left: 10px;
+}
+
+.contentblock{
+    width: 50vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contentblock ul{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
