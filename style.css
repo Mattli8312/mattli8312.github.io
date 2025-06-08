@@ -69,6 +69,7 @@ body{
     flex-direction: row;
     width: 100vw;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .pagebutton{
@@ -87,7 +88,7 @@ body{
 
 .page{
     display: flex;
-    margin-left: 25vw;
+    margin-left: 35vw;
     flex-direction: column;
 }
 
@@ -111,7 +112,7 @@ body{
 }
 
 .contentblock{
-    width: 50vw;
+    width: 30vw;
     margin-top: 10px;
     margin-bottom: 10px;
     transition: all 0.2s ease-in-out;
