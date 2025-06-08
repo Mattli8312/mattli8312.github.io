@@ -55,4 +55,26 @@ function workspace_toolbar_handler(click_state){
     }
 }
 
+function night_mode_handler(){
+    // grab elements we will update
+    const mode = document.getElementById("theme_mode");
+    const body = document.getElementsByTagName("body")[0];
+    const contentheaders = document.getElementsByClassName("contentheader");
+    const contentblocks = document.getElementsByClassName("contentblock");
+    const navigatorbuttons = document.getElementsByClassName("iconProperty");
+    let content = []; content = [...content, ...Array.from(contentheaders), ...Array.from(contentblocks), ...Array.from(navigatorbuttons)];
+    // add the event listener
+    mode.addEventListener("click", ()=>{
+        // flip the current signal
+        let light = mode.getAttribute("mode") === "light" ? false : true;
+        // update the content
+        mode.setAttribute("mode",light ? 'light' : 'dark');
+        body.style.setProperty("background", `var(--${light ? "main-bg-color" : "alternate-color"})`);
+        content.forEach(elm => elm.setAttribute("light", light));
+        // update the icon: I know this line of code is super gross
+        mode.children[0].children[0].setAttribute("class", `fa-solid fa-${light ? 'moon' : 'sun'}`);
+    })
+}
+
 workspace_toolbar_handler();
+night_mode_handler();
