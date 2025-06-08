@@ -4,21 +4,24 @@
 
 // Current State
 let state;
+const defaultState = "OutsideOfWorkButton"
 
 // Mappers
 const button_page_mapper = {
     "HomeButton": "HomePage",
     "WhoAmIButton": "WhoAmIPage",
+    "OutsideOfWorkButton": "OutsideOfWorkPage"
 }
 
 const button_event_handler = {
     "HomeButton": null,
     "WhoAmIButton": null,
+    "OutsideOfWorkButton": null,
 }
 
 function workspace_toolbar_handler(click_state){
     // If there is no state, set it to the default page 
-    state = click_state ?? "WhoAmIButton";
+    state = click_state ?? defaultState;
 
     const workspacebuttons = document.getElementsByClassName("pagebutton");
     for(let i = 0; i < workspacebuttons.length; i++){
