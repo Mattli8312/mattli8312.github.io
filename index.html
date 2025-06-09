@@ -21,6 +21,11 @@
         <!-- Quick buttons to open links to other page and toggling theme -->
         <div class="navigator">
             <div class="icon">
+                <div class="iconProperty" id="emailButton">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+            </div>
+            <div class="icon">
                 <a class="iconProperty" target="_blank" rel="noopener noreferrer" href="https://github.com/Mattli8312">
                     <i class="fa-brands fa-github"></i>
                 </a>
@@ -179,6 +184,33 @@
             need to get into Baldur's Gate but there's a ton of games I've been meaning to play.
         </div>
     </div>
+    <!-- Email Control Panel -->
+    <div class="emailControlPanel" id="controlPanel">
+        <div class="controlPanelSubtitle">Wanna chat? Shoot an email!</div>
+        <div class="controlPanelInputField" id="nameField">
+            <input 
+            id="nameContent"
+            type="text" placeholder="Enter your name">
+        </div>
+        <div class="controlPanelInputField" id="messageField">
+            <textarea 
+            id="messageContent"
+            maxlength="500"
+            rows="25" cols="50"
+            placeholder="Enter your message (max 500 characters)"></textarea>
+        </div>
+        <div id="sendEmailButton">
+            Send Email
+        </div>
+        <div id="cancelEmailButton">
+            Cancel
+        </div>
+        <div id="messageSuccess">Message Sent!</div>
+        <div id="messageFailed">Message failed to send :(</div>
+    </div>
+    <dialog>Hello</dialog>
+    <!-- EmailJS Setup -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Handlers -->
     <script src="index.js"></script>
 </body>

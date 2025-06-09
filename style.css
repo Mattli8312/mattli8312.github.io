@@ -145,3 +145,95 @@ body{
 .icon{
     cursor: pointer;
 }
+
+.emailControlPanel{
+    height: 100vh;
+    width: 600px;
+    background: var(--tertiary-color);
+    position: absolute;
+    right: -40vw;
+    top: 0;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.emailControlPanel[enabled=true]{
+    right: -200px
+}
+
+.controlPanelSubtitle{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: var(--tertiary-size);
+    color: var(--main-bg-color);
+}
+
+.emailControlPanel .controlPanelInputField input, textarea{
+    text-decoration: none;
+    border: none;
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: none;
+    outline:none;
+    transition:height 1s;
+    -webkit-transition:height 1s;
+    padding: 5px 10px 5px 10px;
+}
+
+.controlPanelInputField{
+    margin-top: 12px;
+    margin-left: 15px;
+    border: 1px solid white;
+}
+
+#nameField{
+    width: 200px;
+    padding: 5px 1px;
+}
+
+#messageField{
+    padding: 10px 2px;
+    overflow-y: hidden;
+    width: fit-content;
+    height: 20vh;
+}
+
+#sendEmailButton, #cancelEmailButton{
+    color: var(--main-bg-color);
+    margin-left: 15px;
+    margin-top: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+#sendEmailButton:hover, #cancelEmailButton:hover{
+    background-color: var(--main-bg-color);
+    color: var(--tertiary-color);
+}
+
+#messageSuccess,#messageFailed{
+    margin-left: 15px;
+    width: fit-content;
+    color: black;
+    position: absolute;
+    left: 100%;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+    color: white;
+}
+
+#messageSuccess{
+    background: rgb(7, 224, 7);
+}
+
+#messageFailed{
+    background: rgb(207, 2, 2);
+}
+
+#messageSuccess[enabled=true],#messageFailed[enabled=true]{
+    left: 0;
+}
